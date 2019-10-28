@@ -1,0 +1,37 @@
+{% extends "base/base_site.html" %}
+{% load i18n static %}
+
+{% block title%}
+{% trans 'Home' %}
+{% endblock%}
+
+
+
+{% block content %}
+<div class="w3-row w3-margin-top">
+        <div class="w3-col half_circle_left">
+          <div id="shipping_half_circle">
+            <a href="#">
+              <i class="fa fa-caret-left"></i>&emsp;{% trans 'SHIPPING' %}
+            </a>
+          </div>
+        </div>
+        <div class="w3-col w3-right half_circle_right">
+          <div id="tracking_half_circle">
+            <a href="#">{% trans 'TRACKING' %}&emsp;<i class="fa fa-caret-right"></i></a>
+          </div>
+        </div>
+        <div class="w3-rest w3-center w3-margin-bottom">
+          <a href="{% url 'home' %}"><img src="{% static 'images/brand.cst.png' %}" alt="logo" style="max-width:30vw; margin:auto;"/></a>
+          <div class="home-xxxlarge w3-padding-32">
+            <div class="text-xxlarge-bold w3-margin-top">{% trans 'Thank you for using <br/>FIND it OVERSEAS <br/> Consolidated Transportation Service' %}</div>
+          </div>
+        </div>
+</div>
+{% endblock%}
+
+{% block footer_line %}
+{% if not user.is_authenticated %}
+  <hr/>
+{% endif %}
+{% endblock %}
