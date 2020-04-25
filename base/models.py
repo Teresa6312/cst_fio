@@ -83,3 +83,9 @@ class Address(Address_Common_Info):
 		'zipcode'
 		)
 
+class Notic(models.Model):
+	created_date = models.DateTimeField(auto_now_add = True, blank=True, null=True, verbose_name= _('Creation Date'))
+	open = models.BooleanField(default =False, verbose_name= _('Open Notic'))
+	open.boolean = True
+	text = models.TextField(max_length = 1000, blank=True, default='', verbose_name= _('notic text'))
+	image_url =  models.CharField(max_length = 1000, blank=True, default='', verbose_name = _('notic image URL'))

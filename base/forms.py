@@ -5,6 +5,7 @@ from .models import (
 
 from django.utils.translation import gettext as _
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.utils.translation import ugettext_lazy as _
 
 import datetime
 
@@ -22,7 +23,7 @@ class NewUserCreationForm(UserCreationForm):
 
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
-		self.fields['birthday'].label = _('Birthday')
+		# self.fields['birthday'].label = _('Birthday')
 		self.fields['country'].initial = 'USA'
 		self.fields['phone'].validators = [phone_regex]
 		self.fields['language'].choices = LANGUAGE_CATEGORY

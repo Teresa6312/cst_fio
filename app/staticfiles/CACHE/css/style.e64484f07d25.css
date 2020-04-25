@@ -1,0 +1,646 @@
+/* Define standard variables and values for website */
+/* line 22, base/static/styles/index.scss */
+html {
+  height: 100%; }
+
+/* line 26, base/static/styles/index.scss */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: auto;
+  background-size: 100%;
+  background-image: url("/static/images/background.png");
+  margin: 0;
+  flex: 1 0 auto; }
+
+/* line 39, base/static/styles/index.scss */
+.ivory {
+  color: #fffff0; }
+
+/* line 42, base/static/styles/index.scss */
+.lightivory {
+  color: #f3f1ef; }
+
+/* line 45, base/static/styles/index.scss */
+.seagreen {
+  color: #20b2aa; }
+
+/* line 48, base/static/styles/index.scss */
+.teal {
+  color: #008080; }
+
+/* line 51, base/static/styles/index.scss */
+.gold {
+  color: #ffd700; }
+
+/* line 54, base/static/styles/index.scss */
+.lightgold {
+  color: #ffe140; }
+
+/* line 57, base/static/styles/index.scss */
+.grey {
+  color: grey; }
+
+/* line 60, base/static/styles/index.scss */
+.lightgrey {
+  color: #f9f9f9; }
+
+/* line 63, base/static/styles/index.scss */
+.navy {
+  color: #000080; }
+
+/* line 67, base/static/styles/index.scss */
+.blue {
+  color: #000080; }
+
+/* line 70, base/static/styles/index.scss */
+.darknavy {
+  color: #121A50; }
+
+/* line 73, base/static/styles/index.scss */
+.red {
+  color: #E73229; }
+
+/* line 77, base/static/styles/index.scss */
+.text-xxxlarge {
+  font-size: 3.6rem; }
+
+/* line 80, base/static/styles/index.scss */
+.text-xxxlarge-bold {
+  font-size: 3.6rem;
+  font-weight: bold; }
+
+/* line 84, base/static/styles/index.scss */
+.text-xxlarge {
+  font-size: 3rem; }
+
+/* line 87, base/static/styles/index.scss */
+.text-xxlarge-bold {
+  font-size: 3rem;
+  font-weight: bold; }
+
+/* line 91, base/static/styles/index.scss */
+.text-xlarge {
+  font-size: 3rem; }
+
+/* line 94, base/static/styles/index.scss */
+.text-xlarge-bold {
+  font-size: 3rem;
+  font-weight: bold; }
+
+/* line 98, base/static/styles/index.scss */
+.text-large {
+  font-size: 2.4rem; }
+
+/* line 101, base/static/styles/index.scss */
+.text-large-bold {
+  font-size: 2.4rem;
+  font-weight: bold; }
+
+/* line 105, base/static/styles/index.scss */
+.text-medium {
+  font-size: 1.8rem; }
+
+/* line 108, base/static/styles/index.scss */
+.text-medium-bold {
+  font-size: 1.8rem;
+  font-weight: bold; }
+
+/* line 112, base/static/styles/index.scss */
+.text-regular {
+  font-size: 1rem; }
+
+/* line 115, base/static/styles/index.scss */
+.text-regular-bold {
+  font-size: 1rem;
+  font-weight: bold; }
+
+/* line 119, base/static/styles/index.scss */
+.text-small {
+  font-size: 0.6rem; }
+
+/* line 122, base/static/styles/index.scss */
+.text-small-bold {
+  font-size: 0.6rem;
+  font-weight: bold; }
+
+/* line 127, base/static/styles/index.scss */
+.content_left {
+  width: 80%;
+  margin-left: 20%; }
+
+/* line 131, base/static/styles/index.scss */
+.content_right {
+  width: 80%; }
+
+/* line 134, base/static/styles/index.scss */
+.content_center {
+  width: 80%;
+  margin: auto; }
+
+/* line 3, base/static/styles/style.scss */
+.header {
+  padding: 0 10px; }
+  /* line 5, base/static/styles/style.scss */
+  .header-brand {
+    float: left; }
+    /* line 7, base/static/styles/style.scss */
+    .header-brand__a__img {
+      height: 3rem; }
+  /* line 11, base/static/styles/style.scss */
+  .header-menu {
+    line-height: 3rem;
+    float: right;
+    text-transform: uppercase; }
+    /* line 15, base/static/styles/style.scss */
+    .header-menu a {
+      text-decoration: none; }
+    /* line 18, base/static/styles/style.scss */
+    .header-menu__a, .header-menu-dropdown {
+      display: inline;
+      padding: 1rem;
+      color: grey;
+      font-weight: bold; }
+      /* line 23, base/static/styles/style.scss */
+      .header-menu__a:hover, .header-menu-dropdown:hover {
+        color: #000080; }
+    /* line 27, base/static/styles/style.scss */
+    .header-menu-dropdown {
+      display: relative; }
+      /* line 29, base/static/styles/style.scss */
+      .header-menu-dropdown:hover .header-menu-dropdown-content {
+        visibility: visible;
+        transition: visibility 0s; }
+      /* line 33, base/static/styles/style.scss */
+      .header-menu-dropdown__i {
+        padding: 0 0.6rem; }
+      /* line 36, base/static/styles/style.scss */
+      .header-menu-dropdown-content {
+        position: absolute;
+        display: flex;
+        box-shadow: 0 0.6rem 1rem 0 rgba(0, 0, 0, 0.2), 0 1rem 1.8rem 0 rgba(0, 0, 0, 0.19);
+        background-color: #f3f1ef;
+        z-index: 5;
+        visibility: hidden;
+        transition: visibility 0.3s;
+        flex-direction: column;
+        line-height: 2.4rem;
+        top: 2.4rem; }
+        /* line 47, base/static/styles/style.scss */
+        .header-menu-dropdown-content__a {
+          color: grey;
+          display: block;
+          padding: 0 0.6rem; }
+          /* line 51, base/static/styles/style.scss */
+          .header-menu-dropdown-content__a:hover {
+            color: #2196F3;
+            background-color: #FFF;
+            box-shadow: 0 0.6rem 1rem 0 rgba(0, 0, 0, 0.2), 0 1rem 1.8rem 0 rgba(0, 0, 0, 0.19); }
+        /* line 57, base/static/styles/style.scss */
+        .header-menu-dropdown-content__select {
+          border: none; }
+    /* line 62, base/static/styles/style.scss */
+    .header-menu .profile-links {
+      right: 7.92rem; }
+    /* line 65, base/static/styles/style.scss */
+    .header-menu .languages {
+      right: 3.6rem;
+      line-height: normal; }
+    /* line 69, base/static/styles/style.scss */
+    .header-menu-icon__a__i {
+      font-size: 1.8rem;
+      display: none; }
+
+/* ---------------------------------Style the input fields ----------------------------------*/
+/* line 79, base/static/styles/style.scss */
+input[type=text], input[type=password], input[type=email], textarea {
+  padding: 0.5vw;
+  width: 100%;
+  margin: 0; }
+
+/* line 85, base/static/styles/style.scss */
+select {
+  padding: 0.5vw;
+  margin: 0; }
+
+/* line 89, base/static/styles/style.scss */
+.required_stick {
+  color: red;
+  font-size: 1.7rem;
+  vertical-align: middle;
+  line-height: 01rem; }
+
+/* line 95, base/static/styles/style.scss */
+input[type=checkbox] {
+  display: inline; }
+
+/*  -------------------------- for circles ------------------------------------------*/
+/* animation block  */
+@-webkit-keyframes hoverTrackingIN {
+  from {
+    right: -11rem; }
+  to {
+    right: -9rem; } }
+
+@-webkit-keyframes hoverTrackingOUT {
+  from {
+    right: -9rem; }
+  to {
+    right: -11rem; } }
+
+@-webkit-keyframes hoverShippingIN {
+  from {
+    left: -9rem; }
+  to {
+    left: -11rem; } }
+
+@-webkit-keyframes hoverShippingOUT {
+  from {
+    left: -11rem; }
+  to {
+    left: -9rem; } }
+
+/* line 141, base/static/styles/style.scss */
+.home-circle-left {
+  margin-top: 3rem;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 21rem;
+  height: 21rem; }
+  /* line 148, base/static/styles/style.scss */
+  .home-circle-left-content {
+    left: -9rem;
+    border-radius: 50%;
+    background-color: #ffd700;
+    text-align: right;
+    padding: 10rem 1rem;
+    position: relative;
+    animation-name: hoverShippingOUT;
+    animation-duration: .5s; }
+    /* line 157, base/static/styles/style.scss */
+    .home-circle-left-content:hover {
+      animation-name: hoverShippingIN;
+      animation-duration: .5s;
+      left: -11rem; }
+    /* line 162, base/static/styles/style.scss */
+    .home-circle-left-content__a {
+      text-decoration: none;
+      font-weight: bold;
+      color: white; }
+
+/* line 169, base/static/styles/style.scss */
+.home-circle-right {
+  margin-top: 3rem;
+  overflow: hidden;
+  position: relative;
+  float: right;
+  width: 21rem;
+  height: 21rem; }
+  /* line 176, base/static/styles/style.scss */
+  .home-circle-right-content {
+    right: -9rem;
+    border-radius: 50%;
+    background-color: #000080;
+    text-align: left;
+    padding: 10rem 1rem;
+    position: relative;
+    animation-name: hoverTrackingIN;
+    animation-duration: .5s; }
+    /* line 185, base/static/styles/style.scss */
+    .home-circle-right-content:hover {
+      animation-name: hoverTrackingOUT;
+      animation-duration: .5s;
+      right: -11rem; }
+    /* line 190, base/static/styles/style.scss */
+    .home-circle-right-content__a {
+      text-decoration: none;
+      font-weight: bold;
+      color: white; }
+
+/* line 198, base/static/styles/style.scss */
+.home-content__a__img {
+  width: 36rem; }
+
+/* line 206, base/static/styles/style.scss */
+#tracking_half_circle:hover {
+  /* animation passing name  */
+  animation-name: hoverIN;
+  animation-duration: .5s;
+  left: 3vw; }
+
+/* line 213, base/static/styles/style.scss */
+#shipping_full_circle:hover {
+  /* animation passing name  */
+  animation-name: hoverIN;
+  animation-duration: .5s;
+  left: 3vw; }
+
+/* line 221, base/static/styles/style.scss */
+.half_circle_left a, .half_circle_right a, #shipping_full_circle a, #tracking_half_circle a, .circle a, .hidden a {
+  color: #fff; }
+
+/* line 225, base/static/styles/style.scss */
+.circle {
+  margin-top: 5vw;
+  overflow: hidden;
+  height: 100%;
+  float: left; }
+
+/* line 232, base/static/styles/style.scss */
+#shipping_half_circle
+#footer {
+  flex: 0 0 auto;
+  width: 100%;
+  bottom: 0;
+  padding-top: 0.5vw;
+  padding-bottom: 0;
+  margin-bottom: 0; }
+
+/* line 246, base/static/styles/style.scss */
+#footer h5 {
+  font-weight: bold;
+  color: #000080; }
+
+/* line 250, base/static/styles/style.scss */
+.footer-copyright {
+  background-color: #000080;
+  text-align: center;
+  margin: 0;
+  padding: 0.5vw;
+  color: #fff; }
+
+/*----------------------------------------for small screem ----------------------------------*/
+@media screen and (max-width: 600px) {
+  /* line 260, base/static/styles/style.scss */
+  .home-xxxlarge {
+    font-size: 28px; }
+  /* line 263, base/static/styles/style.scss */
+  .home-xxxlarge-bold {
+    font-size: 28px;
+    font-weight: bold; }
+  /* line 267, base/static/styles/style.scss */
+  .home-xxlarge {
+    font-size: 25px;
+    font-family: Georgia; }
+  /* line 271, base/static/styles/style.scss */
+  .home-xxlarge-bold {
+    font-size: 25px;
+    font-weight: bold; }
+  /* line 275, base/static/styles/style.scss */
+  .home-xlarge {
+    font-size: 22px; }
+  /* line 278, base/static/styles/style.scss */
+  .home-xlarge-bold {
+    font-size: 22px;
+    font-weight: bold; }
+  /* line 282, base/static/styles/style.scss */
+  .home-large {
+    font-size: 20px; }
+  /* line 285, base/static/styles/style.scss */
+  .home-large-bold {
+    font-size: 20px;
+    font-weight: bold; }
+  /* line 289, base/static/styles/style.scss */
+  .home_logged {
+    background-position: right 0 bottom 0; }
+  /* line 292, base/static/styles/style.scss */
+  .content_left {
+    width: 95%;
+    margin: auto; }
+  /* line 296, base/static/styles/style.scss */
+  .content_right {
+    width: 95%;
+    margin: auto;
+    margin-top: 10px; }
+  /* line 301, base/static/styles/style.scss */
+  .content_center {
+    width: 95%;
+    margin: auto; }
+  /* line 305, base/static/styles/style.scss */
+  #main_address_form {
+    margin: 20px auto; }
+  /* line 308, base/static/styles/style.scss */
+  #container {
+    flex: 0 0 auto; }
+  /* line 311, base/static/styles/style.scss */
+  #footer {
+    position: relative;
+    height: auto;
+    text-align: center; }
+  /* line 316, base/static/styles/style.scss */
+  .footer_links {
+    display: none; }
+  /* line 319, base/static/styles/style.scss */
+  #footer h5 {
+    margin: 0;
+    cursor: pointer; }
+  /* line 323, base/static/styles/style.scss */
+  #customer_service_table img {
+    width: 40px;
+    margin: 10px 10px; }
+  /* line 327, base/static/styles/style.scss */
+  #customer_service_table {
+    background-color: lightgrey;
+    width: 100%;
+    margin: 10px; }
+  /* line 332, base/static/styles/style.scss */
+  #customer_service_table th {
+    width: 23%;
+    height: 140px;
+    background-color: white;
+    margin: 2px 1%; }
+  /* line 338, base/static/styles/style.scss */
+  .dropdown .dropdown-content {
+    display: block;
+    background-color: Transparent;
+    box-shadow: none;
+    padding-left: 10px; }
+  /* line 344, base/static/styles/style.scss */
+  .menu {
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    padding-top: 10px;
+    padding-right: 10px; }
+  /* line 351, base/static/styles/style.scss */
+  .menu .icon {
+    position: absolute;
+    right: 0;
+    top: 0; }
+  /* line 356, base/static/styles/style.scss */
+  .menu a, .dropdown .dropbtn, .menu form {
+    display: none; }
+  /* line 359, base/static/styles/style.scss */
+  .menu a:hover {
+    color: #2196F3;
+    background-color: #FFF;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19); }
+  /* line 364, base/static/styles/style.scss */
+  .menu a.icon {
+    float: right;
+    display: block;
+    padding: 5px 10px; }
+  /* line 369, base/static/styles/style.scss */
+  .menu #account_nav {
+    float: left;
+    display: block; }
+  /* line 373, base/static/styles/style.scss */
+  #CollectionPointID {
+    display: none; }
+  /* line 376, base/static/styles/style.scss */
+  #map {
+    display: block;
+    width: 100%; }
+  /* line 380, base/static/styles/style.scss */
+  .sidebar {
+    display: none; }
+  /* line 383, base/static/styles/style.scss */
+  fieldset label {
+    width: 100px; }
+  /* line 386, base/static/styles/style.scss */
+  fieldset {
+    padding: 0px; }
+  /* line 389, base/static/styles/style.scss */
+  .select_column {
+    width: 50px; }
+  /* line 393, base/static/styles/style.scss */
+  #shipping_half_circle, #tracking_half_circle, #shipping_full_circle, #tracking_full_circle {
+    font-size: 2.2vw; }
+  /* line 396, base/static/styles/style.scss */
+  .w3-third input, .w3-third select, .w3-half input, .w3-half select, .w3-quarter input, .w3-quarter select {
+    width: 100%; } }
+
+@media screen and (max-width: 600px) {
+  /* line 402, base/static/styles/style.scss */
+  .menu.responsive {
+    position: relative; }
+  /* line 403, base/static/styles/style.scss */
+  .menu.responsive a {
+    float: none;
+    display: block;
+    text-align: left; }
+  /* line 408, base/static/styles/style.scss */
+  .menu.responsive .dropdown {
+    float: none; }
+  /* line 409, base/static/styles/style.scss */
+  .menu.responsive .dropdown-content {
+    position: relative; }
+  /* line 410, base/static/styles/style.scss */
+  .menu.responsive form {
+    display: block;
+    background-color: Transparent;
+    box-shadow: none;
+    padding-left: 10px; }
+  /* line 417, base/static/styles/style.scss */
+  .menu.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left; }
+  /* line 422, base/static/styles/style.scss */
+  .menu select {
+    display: relative; } }
+
+/* ---------------------------------MESSAGES & ERRORS ----------------------------------------------*/
+/* line 429, base/static/styles/style.scss */
+ul.messagelist {
+  padding: 0;
+  margin: 0; }
+
+/* line 434, base/static/styles/style.scss */
+ul.messagelist li {
+  display: block;
+  font-weight: 400;
+  font-size: 13px;
+  padding: 10px 10px 10px 65px;
+  margin: 0 0 10px 0;
+  background: #dfd url("/static/admin/img/icon-yes.svg") 40px 12px no-repeat;
+  background-size: 16px auto;
+  color: #333; }
+
+/* line 445, base/static/styles/style.scss */
+ul.messagelist li.warning {
+  background: #ffc url("/static/admin/img/icon-alert.svg") 40px 14px no-repeat;
+  background-size: 14px auto; }
+
+/* line 450, base/static/styles/style.scss */
+ul.messagelist li.error {
+  background: #ffefef url("/static/admin/img/icon-no.svg") 40px 12px no-repeat;
+  background-size: 16px auto; }
+
+/* line 455, base/static/styles/style.scss */
+.errornote {
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  padding: 10px 12px;
+  margin: 0 0 10px 0;
+  color: #ba2121;
+  border: 1px solid #ba2121;
+  border-radius: 4px; }
+
+/* line 466, base/static/styles/style.scss */
+ul.errorlist {
+  margin: 0 0 4px;
+  padding: 0;
+  color: #ba2121; }
+
+/* line 472, base/static/styles/style.scss */
+ul.errorlist li {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 4px; }
+
+/* line 478, base/static/styles/style.scss */
+ul.errorlist li:first-child {
+  margin-top: 0; }
+
+/* line 482, base/static/styles/style.scss */
+ul.errorlist li a {
+  color: inherit;
+  text-decoration: underline; }
+
+/* line 487, base/static/styles/style.scss */
+td ul.errorlist {
+  margin: 0;
+  padding: 0; }
+
+/* line 492, base/static/styles/style.scss */
+td ul.errorlist li {
+  margin: 0; }
+
+/* line 496, base/static/styles/style.scss */
+.form-row.errors {
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid #eee;
+  background: none; }
+
+/* line 503, base/static/styles/style.scss */
+.form-row.errors ul.errorlist li {
+  padding-left: 0; }
+
+/* line 507, base/static/styles/style.scss */
+.errors input, .errors select, .errors textarea {
+  border: 1px solid #ba2121; }
+
+/* line 511, base/static/styles/style.scss */
+div.system-message {
+  background: #ffc;
+  margin: 10px;
+  padding: 6px 8px;
+  font-size: .8em; }
+
+/* line 518, base/static/styles/style.scss */
+div.system-message p.system-message-title {
+  padding: 4px 5px 4px 25px;
+  margin: 0;
+  color: #c11;
+  background: #ffefef url("/static/admin/img/icon-no.svg") 5px 5px no-repeat; }
+
+/* line 525, base/static/styles/style.scss */
+.description {
+  font-size: 12px;
+  padding: 5px 0 0 12px; }

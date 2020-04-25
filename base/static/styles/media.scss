@@ -1,0 +1,90 @@
+@media all and (max-width: 600px) {
+    .dropdown .dropdown-content{
+      display: block;
+      background-color: Transparent;
+      box-shadow: none;
+      padding-left: 10px;
+    }
+    .menu{
+      padding: 0;
+      margin: 0;
+      z-index: 1;
+      padding-top: 10px;
+      padding-right: 10px;
+    }
+    .menu .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .menu a, .dropdown .dropbtn, .menu form {
+      display: none;
+    }
+    .menu a:hover {
+      color: #2196F3;
+      background-color:#FFF;
+      box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
+    }
+    .menu a.icon {
+      float: right;
+      display: block;
+      padding: 5px 10px;
+    }
+    .menu    #account_nav{
+      float: left;
+      display: block;
+    }
+    #CollectionPointID{
+      display: none;
+    }
+    #map{
+      display: block;
+      width:100%;
+    }
+    .sidebar{
+      display: none;
+    }
+    fieldset label {
+      width: 100px;
+    }
+    fieldset{
+      padding: 0px;
+    }
+    .select_column{
+      width:50px;
+    }
+
+    #shipping_half_circle, #tracking_half_circle, #shipping_full_circle,  #tracking_full_circle{
+      font-size: 2.2vw;
+    }
+    .w3-third input, .w3-third select, .w3-half input, .w3-half select, .w3-quarter input, .w3-quarter select{
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .menu.responsive {position: relative;}
+    .menu.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .menu.responsive .dropdown {float: none;}
+    .menu.responsive .dropdown-content {position: relative;}
+    .menu.responsive form {
+          display: block;
+          background-color: Transparent;
+          box-shadow: none;
+          padding-left: 10px;
+        }
+
+    .menu.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+    .menu select{
+      display: relative;
+    }
+  }
+

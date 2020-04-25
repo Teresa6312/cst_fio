@@ -1,123 +1,128 @@
-{% load i18n static %}
+{% load i18n static compress %}
 <!DOCTYPE html>
-{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
-<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" {% if LANGUAGE_BIDI %}dir="rtl"{% endif %}>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}">
 
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>{% block title %}{% endblock %} | {% trans 'Consolidated Transportation Service from FIND it OVERSEAS' %}</title>
-{% load static %}
-<link rel="icon" href="{% static 'images/logo.pgn' %}" type="image/x-icon">
 
-{% if LANGUAGE_BIDI %}
-{% load static %}
-<link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static "admin/css/rtl.css" %}{% endblock %}" />
-{% endif %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    {% block blockbots %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="FIND it OVERSEAS provides Consolidated Transportation Service">
+    <meta name="keywords" content="Consolidated Transportation Service, Co-shipping, Direct Shipping, Shipping from China, ">
+    <meta name="author" content="Cuishan Liu">
+    {% endblock %}
 
-
-{% block extrahead %}{% endblock %}
-
-
-
-  {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
-
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
-  <script src="/jsi18n"></script>
-  <script src="{% static 'js/base.js' %}"></script>
-  <!-- for fa fa icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>{% block title %}{{title}}{% endblock %} | {% trans 'Consolidated Transportation Service from FIND it OVERSEAS' %}</title>
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    {% block extrahead %}{% endblock %}
 
 
-  {% block extrastyle %}{% endblock %}
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="/jsi18n"></script>
+    <script src="{% static 'js/base.js' %}"></script>
 
-  {% block responsive %}
-      {% if LANGUAGE_BIDI %}
-        <link rel="stylesheet" type="text/css" href="{% static "admin/css/responsive_rtl.css" %}" />
-      {% endif %}
-  {% endblock %}
-
-
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <!-- for fa fa icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+    {% compress css %}
+        <link type="text/x-scss" href="{% static 'styles/index.scss' %}" rel="stylesheet" media="screen">
+        <link type="text/x-scss" href="{% static 'styles/style.scss' %}" rel="stylesheet" media="screen">
+        {% block extrastyle %}{% endblock %}
+        {% block responsive %}{% endblock %}
+    {% endcompress %}
 
 </head>
 
-{% load i18n %}
-
-<body class="{% if is_popup %}popup {% endif %}{% block bodyclass %}{% endblock %}"
-  data-admin-utc-offset="{% now "Z" %}">
-
-
-<!-- Container -->
-    <div id="container">
-
-        {% if not is_popup %}
+<body>
+    {% block header %}
         <!-- Header -->
-        <div>
-            <div id="branding">
-            {% block branding %}{% endblock %}
+        <div class="header">
+            <div class="header-brand">
+                <a href="{% url 'base:home' %}" class="header-brand__a">
+                    <img src="{% static 'images/brand.cst.png' %}" alt="logo" class="header-brand__a__img">
+                </a>
             </div>
-            {% block usertools %}
-            {% if has_permission %}
-            <div id="user-tools">
-                {% block welcome-msg %}
-                    {% trans 'Welcome,' %}
-                    <strong>{% firstof user.get_short_name user.get_username %}</strong>.
-                {% endblock %}
-                {% block userlinks %}
-                    {% if site_url %}
-                        <a href="{{ site_url }}">{% trans 'View site' %}</a> /
-                    {% endif %}
-                    {% if user.is_active and user.is_staff %}
-                        {% url 'django-admindocs-docroot' as docsroot %}
-                        {% if docsroot %}
-                            <a href="{{ docsroot }}">{% trans 'Documentation' %}</a> /
-                        {% endif %}
-                    {% endif %}
-                    {% if user.has_usable_password %}
-                    <a href="{% url 'changepassword' %}">{% trans 'Change password' %}</a> /
-                    {% endif %}
-                    <a href="{% url 'logout' %}">{% trans 'Log out' %}</a>
-                {% endblock %}
+            <div class="header-menu">
+                <a class="header-menu__a" href="{% url 'base:home'%}">{% trans "Price List" %}</a>
+                {% if user.is_authenticated %}
+                    <div class="header-menu-dropdown">
+                        {{user.username}}
+                        <i class="header-menu-dropdown__i fa fa-caret-down"></i>
+                        <div class="header-menu-dropdown-content profile-links">
+                            <a class="header-menu-dropdown-content__a" href="{% url 'base:account' %}">{% trans "Profile" %}</a>
+                            <a class="header-menu-dropdown-content__a" href="{% url 'base:home' %}">{% trans "Address Book" %}</a>
+                            <a class="header-menu-dropdown-content__a" href="{% url 'base:home' %}">{% trans "Packages History" %}</a>
+                            <a class="header-menu-dropdown-content__a" href="{% url 'base:home' %}">{% trans "Wallet" %}</a>
+                            <a class="header-menu-dropdown-content__a" href="{% url 'base:logout' %}">{% trans "Log Out" %}</a>
+                        </div>
+                    </div>
+                {% else %}
+                    <a class="header-menu__a" href="{% url 'base:login' %}"><span class="logo-text-blue" >{% trans "Log in" %}</span></a>
+                    <a class="header-menu__a" href="{% url 'base:register' %}"><span class="logo-text-red" >{% trans "Sign Up" %}</span></a>
+                {% endif %}
+
+                <div class="header-menu-dropdown">
+                    Language/语言
+                    <i class="header-menu-dropdown__i fa fa-caret-down"></i>
+                    <div class="header-menu-dropdown-content languages">
+                        <form class="header-menu-dropdown-content__form" action="/_/setlang/" method="post">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ redirect_to }}"/>
+                            <select name="language" class="header-menu-dropdown-content__select language__select" onchange="this.form.submit()">
+                                    <option class="header-menu-dropdown-content__select__option language__select__option" value="en-us">English</option>
+                                    <option class="header-menu-dropdown-content__select__option language__select__option" value="zh-Hans">简体中文</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                
+                <a class="header-menu-icon__a" href="javascript:void(0);" class="icon" onclick="openMenu()">
+                    <i class="header-menu-icon__a__i fa fa-bars"></i>
+                </a>
             </div>
-            {% endif %}
-            {% endblock %}
-            {% block nav-global %}{% endblock %}
         </div>
         <!-- END Header -->
-
-        {% block breadcrumbs %}
-        {% endblock %}
-        {% endif %}
-
-        {% block messages %}
-            {% if messages %}
-            <ul class="messagelist">{% for message in messages %}
-              <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message|capfirst }}</li>
-            {% endfor %}</ul>
+    
+        {% block notic %}
+            {% if notic %}
             {% endif %}
-        {% endblock messages %}
-
-        <!-- Content -->
-        <div class="{% block coltype %}colM{% endblock %}">
-            {% block pretitle %}{% endblock %}
-            {% block content_title %}{% if title %}<h1>{{ title }}</h1>{% endif %}{% endblock %}
-            {% block content %}
-            {% block object-tools %}{% endblock %}
-            {{ content }}
-            {% endblock %}
-            {% block sidebar %}{% endblock %}
-        </div>
-        <!-- END Content -->
+        {% endblock %}
+    {% endblock %}
 
 
+    {% block messages %}
+        {% if messages %}
+        <ul class="messagelist__ul">{% for message in messages %}
+            <li{% if message.tags %} class="messagelist__ul__li {{ message.tags }}"{% endif %}>{{ message|capfirst }}</li>
+        {% endfor %}</ul>
+        {% endif %}
+    {% endblock %}
+
+
+
+    <!-- Content -->
+    <div class="content {% block contentClass %}{% endblock %}">
+        {% block sidebar_right %}{% endblock %}
+        {% block content_title %}{% if title %}<div class="content-title">{{ title }}</div>{% endif %}{% endblock %}
+        {% block content %}{% endblock %}
+        {% block sidebar_left %}{% endblock %}
     </div>
-<!-- END Container -->
+    <!-- END Content -->
 
-{% block footer %}<div id="footer"></div>{% endblock %}
-
+    {% block footer %}
+        <div class="footer">
+            <span class="footer-copyright">
+                &copy; 2019 {% trans "All Rights Reserved" %}
+            </span>
+            <span class="footer-policy">
+                {% trans "Privacy Policy" %} | {% trans "Terms of Service" %}
+            </span>
+        </div>
+    {% endblock %}
 </body>
 
 </html>

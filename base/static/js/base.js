@@ -19,7 +19,7 @@ $(document).ready(function(){
         $(this).css('background-color','#fff');
       }
     });
-    $(".contentCSS input[required]").before('<span class="required_stick">*</span>');
+    $("input[required]").before('<span class="required_stick">*</span>');
     $("select[required]").before('<span class="required_stick">*</span>');
     $('#id_email').change(function(){
       if(!validateEmail($(this).val())){

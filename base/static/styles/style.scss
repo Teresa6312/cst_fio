@@ -1,0 +1,251 @@
+@import './index.scss';
+
+/*  -------------------------- header ------------------------------------------*/
+
+.header{
+  &-brand{
+    float: left;
+    &__a__img{
+      height: $biggersize;
+      padding: 0.5*$minisize;
+    }
+  }
+  &-menu{
+    line-height: $biggersize;
+    float: right;
+    text-transform: uppercase;
+    & a {
+      text-decoration:none;
+    }
+    &__a, &-dropdown{
+      display: inline;
+      padding: $smallsize;
+      cursor:pointer;
+      color: $grey;
+      font-weight: bold;
+      &:hover{
+        color:$darknavy
+      }
+    }
+    &-dropdown{
+      display: relative;
+      &:hover &-content{
+        visibility: visible;
+        transition: visibility 0s;
+      }
+      &__i{
+        padding: 0 $minisize;
+      }
+      &-content{
+        position: absolute;
+        box-shadow:$boxshadow;
+        background-color:$lightivory;
+        z-index: 5;
+        visibility: hidden;
+        transition: visibility 0.3s;
+        line-height: $bigsize;
+        top: $bigsize;
+        &__a{
+          color: $grey;
+          display: block;
+          padding: 0 $minisize;
+          &:hover{
+            color: $navy;
+            background-color:#FFF;
+            box-shadow:$boxshadow;
+          }
+        }
+        &__select{
+          border: none;
+          padding: $minisize;
+          background-color: $lightivory;
+          &__option{
+            cursor:pointer;
+          }
+        }
+      }
+    }
+    & .profile-links{
+      right:2.2*$supersize;
+    }
+    & .languages{
+      right:$supersize;
+      line-height: normal;
+    }
+    &-icon__a__i{
+      font-size: $middlesize;
+      display: none;
+    }
+  }
+}
+
+/*  -------------------------- content ------------------------------------------*/
+
+.content{
+  flex: 1 100%;
+  vertical-align: text-top;
+}
+
+
+/*--------------------------------------- footer ----------------------------------------*/
+
+.footer{
+  padding: $minisize 0;
+  background-color: #000080;
+  text-align: center;
+  &-copyright, &-policy {
+    text-align: center;
+    margin: 0;
+    padding: 0 $middlesize;
+    color: #fff;
+  }
+}
+
+/*  -------------------------- home circles ------------------------------------------*/
+/* animation block  */
+@-webkit-keyframes rightIn {
+  from {
+    left: 0;
+  }
+  to {
+    left: 3*$smallsize;
+  }
+}
+
+@-webkit-keyframes rightOut {
+  from {
+    left: 2*$smallsize;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@-webkit-keyframes leftIn {
+  from {
+    left: -10*$smallsize;
+  }
+  to {
+    left: -12*$smallsize;
+  }
+}
+
+@-webkit-keyframes leftOut {
+  from {
+    left: -12*$smallsize;
+  }
+  to {
+    left: -10*$smallsize;
+  }
+}
+
+
+.home{
+  &-circle-left{
+    margin-top: $biggersize;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    float: left;
+    width: 12*$smallsize;
+    &-content{
+      width: 18*$smallsize;
+      border-radius: 50%;
+      padding: 10*$smallsize $middlesize;
+      background-color: $gold;
+      text-align: right;
+      position: relative;
+      left: -10*$smallsize;
+      animation-name: leftOut;
+      animation-duration: .5s;
+      &:hover{
+        animation-name: leftIn;
+        animation-duration: .5s;
+        left: -12*$smallsize;
+      }
+      &__a{
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+      }
+    }
+  }
+  &-circle-right{
+    margin-top: $biggersize;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    float: right;
+    width: 12*$smallsize;
+    &-content{
+      width: 18*$smallsize;
+      border-radius: 50%;
+      padding: 10*$smallsize $middlesize;
+      background-color: $navy;
+      position: relative;
+      animation-name: rightOut;
+      animation-duration: .5s;
+      &:hover{
+        animation-name: rightIn;
+        animation-duration: .5s;
+        left: 2*$smallsize;
+      }
+      &__a{
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+      }
+    }
+  }
+  &-content{
+    text-align: center;
+    font-size: $bigsize;
+    font-weight: bold;
+    line-height: $supersize;
+    &__a__img{
+      width: 8*$supersize;
+      margin: $bigsize 0;
+    }
+  }
+}
+
+/* ---------------------------------MESSAGES & ERRORS ----------------------------------------------*/
+.messagelist__ul{
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  &__li{
+    display: block;
+    font-weight: bold;
+    padding: $minisize $minisize $minisize $biggersize;
+    margin: 0 0 $minisize 0;
+    background: #dfd url("/static/admin/img/icon-yes.svg") $bigsize $smallsize no-repeat;
+    background-size: $middlesize auto;
+    color: #333;
+    &.warning{
+      background: #ffc url("/static/admin/img/icon-alert.svg") $bigsize $smallsize no-repeat;
+      background-size: $middlesize auto;
+    }
+    &.error {
+      background: #ffefef url("/static/admin/img/icon-no.svg") $bigsize $smallsize no-repeat;
+      background-size: $middlesize auto;
+    }
+  }
+  &.errornote {
+    padding: $minisize $minisize $minisize $biggersize;
+    margin: 0 0 $minisize 0;
+    color: $red;
+    border: 1px solid $red;
+    border-radius: $minisize;
+  }
+  &.errorlist {
+    margin: 0 0 4px;
+    padding: 0;
+    color: #ba2121;
+    & li{
+      font-size: 13px;
+      display: block;
+      margin-bottom: 4px;
+    }
+  }
+}

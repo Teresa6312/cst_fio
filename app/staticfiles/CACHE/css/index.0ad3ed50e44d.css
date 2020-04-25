@@ -1,0 +1,141 @@
+/* Define standard variables and values for website */
+/* line 22, base/static/styles/index.scss */
+html {
+  height: 100%; }
+
+/* line 26, base/static/styles/index.scss */
+body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: auto;
+  background-size: 100%;
+  background-image: url("/static/images/background.png");
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap; }
+
+/* line 39, base/static/styles/index.scss */
+.ivory {
+  color: #fffff0; }
+
+/* line 42, base/static/styles/index.scss */
+.lightivory {
+  color: #f3f1ef; }
+
+/* line 45, base/static/styles/index.scss */
+.seagreen {
+  color: #20b2aa; }
+
+/* line 48, base/static/styles/index.scss */
+.teal {
+  color: #008080; }
+
+/* line 51, base/static/styles/index.scss */
+.gold {
+  color: #ffd700; }
+
+/* line 54, base/static/styles/index.scss */
+.lightgold {
+  color: #ffe140; }
+
+/* line 57, base/static/styles/index.scss */
+.grey {
+  color: grey; }
+
+/* line 60, base/static/styles/index.scss */
+.lightgrey {
+  color: #f9f9f9; }
+
+/* line 63, base/static/styles/index.scss */
+.navy {
+  color: #000080; }
+
+/* line 67, base/static/styles/index.scss */
+.blue {
+  color: #000080; }
+
+/* line 70, base/static/styles/index.scss */
+.darknavy {
+  color: #121A50; }
+
+/* line 73, base/static/styles/index.scss */
+.red {
+  color: #E73229; }
+
+/* line 77, base/static/styles/index.scss */
+.text-xxxlarge {
+  font-size: 3.6rem; }
+
+/* line 80, base/static/styles/index.scss */
+.text-xxxlarge-bold {
+  font-size: 3.6rem;
+  font-weight: bold; }
+
+/* line 84, base/static/styles/index.scss */
+.text-xxlarge {
+  font-size: 3rem; }
+
+/* line 87, base/static/styles/index.scss */
+.text-xxlarge-bold {
+  font-size: 3rem;
+  font-weight: bold; }
+
+/* line 91, base/static/styles/index.scss */
+.text-xlarge {
+  font-size: 3rem; }
+
+/* line 94, base/static/styles/index.scss */
+.text-xlarge-bold {
+  font-size: 3rem;
+  font-weight: bold; }
+
+/* line 98, base/static/styles/index.scss */
+.text-large {
+  font-size: 2.4rem; }
+
+/* line 101, base/static/styles/index.scss */
+.text-large-bold {
+  font-size: 2.4rem;
+  font-weight: bold; }
+
+/* line 105, base/static/styles/index.scss */
+.text-medium {
+  font-size: 1.8rem; }
+
+/* line 108, base/static/styles/index.scss */
+.text-medium-bold {
+  font-size: 1.8rem;
+  font-weight: bold; }
+
+/* line 112, base/static/styles/index.scss */
+.text-regular {
+  font-size: 1rem; }
+
+/* line 115, base/static/styles/index.scss */
+.text-regular-bold {
+  font-size: 1rem;
+  font-weight: bold; }
+
+/* line 119, base/static/styles/index.scss */
+.text-small {
+  font-size: 0.6rem; }
+
+/* line 122, base/static/styles/index.scss */
+.text-small-bold {
+  font-size: 0.6rem;
+  font-weight: bold; }
+
+/* line 127, base/static/styles/index.scss */
+.content_left {
+  width: 80%;
+  margin-left: 20%; }
+
+/* line 131, base/static/styles/index.scss */
+.content_right {
+  width: 80%; }
+
+/* line 134, base/static/styles/index.scss */
+.content_center {
+  width: 80%;
+  margin: auto; }

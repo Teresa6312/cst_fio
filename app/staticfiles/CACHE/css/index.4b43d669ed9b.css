@@ -1,0 +1,15 @@
+/* Define standard variables and values for website */
+/* line 19, base/static/styles/index.scss */
+html {
+  height: 100%; }
+
+/* line 23, base/static/styles/index.scss */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: auto;
+  background-size: 100%;
+  background-image: url("/static/images/background.png");
+  margin: 0; }

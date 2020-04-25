@@ -6,9 +6,9 @@ import sys
 
 def main():
     try:
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'cst_fio.settings.local')
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'app.settings.local')
     except:
-        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'cst_fio.settings.production')
+        os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'app.settings.production')
         
     try:
         from django.core.management import execute_from_command_line

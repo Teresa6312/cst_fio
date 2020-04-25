@@ -1,0 +1,15 @@
+{% extends "main/base_site.html" %}
+{% load i18n static %}
+
+{% block title%}
+{{user.username}}{% trans "'s Wallet" %}
+{% endblock%}
+
+{% block content %}
+<div class="content_center">
+  <h2>
+    <img src="{% static 'image/reward-points.png' %}" alt="reward_points" height="50px" width="50px"/>
+    {% trans " Reward Points" %}: {{user.reward}}
+  </h2>
+</div>
+{% endblock %}

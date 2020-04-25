@@ -1,0 +1,78 @@
+.register, .login{
+    border-radius: 4px;
+    overflow: hidden;
+    width: 33%;
+    min-width: 40rem;
+    margin: 0 auto;
+    font-size: 15px;
+    flex: 0 0 auto;
+}
+
+/* SOCIAL MEDIA LOGIN */
+.socmed-login .socmed-btn {
+    padding: 10px 25px;
+    color: #FFFFFF;
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+}
+.socmed-login .socmed-btn i {
+	text-align: left;
+    border-right: 1px solid #FFFFFF;
+    margin-right: 15px;
+    width: 25px;
+	font-size: 16x;
+	vertical-align: middle;
+}
+.socmed-login .socmed-btn span {
+	display: inline-block;
+    margin-top: 8px;
+    line-height: 0;
+}
+.socmed-login .wechat-btn {
+	background: green;
+}
+.socmed-login .wechat-btn:hover {
+	background: #128D2A;
+}
+.socmed-login .google-btn {
+	background: #ef0a0a;
+}
+.socmed-login .google-btn:hover {
+	background: #d40909;
+}
+.socmed-login .taobao-btn {
+	background: orange;
+}
+.socmed-login .taobao-btn:hover {
+	background: #EFB747;
+}
+
+/* RESPONSIVE */
+@media screen and (max-height: 600px) {
+  .register, .login{
+		margin-top: 0 !important;
+		top: 10px !important;
+    border:none;
+    background: none;
+	}
+}
+@media screen and (max-width: 400px) {
+  .register, .login{
+		min-width: 283px;
+		width: 95%;
+    margin: 10px auto;
+    border:none;
+    background: none;
+	}
+	.login-form .input {
+		width: 140px;
+	}
+	.signup-form .input {
+		width: 250px;
+	}
+	.socmed-login .socmed-btn i {
+		margin-right: 5px;
+		width: 19px;
+	}
+}

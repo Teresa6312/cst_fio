@@ -1,0 +1,58 @@
+{% extends "main/base_site.html" %}
+
+{% load i18n static %}
+
+{% block content %}
+
+<div class="w3-panel w3-margin-top">
+    <div class="text-xxlarge-bold">{% trans 'Packages History' %}</div>
+</div>
+<hr/>
+
+
+<div class="w3-panel">
+      <div class="w3-row" style="display:block;">
+          <a class="block_link" href="javascript:void(0)" onclick="openBlock(event, 'order');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding w3-border-red w3-text-black"><div class='text-medium'>{% trans 'Global Shopping Order(s)' %}</div></div>
+          </a>
+          <a class="block_link" href="javascript:void(0)" onclick="openBlock(event, 'direct_package');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding w3-text-black"><div class='text-medium'>{% trans 'Direct Shipping Package(s)' %}</div></div>
+          </a>
+          <a class="block_link" href="javascript:void(0)" onclick="openBlock(event, 'coshipping');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding w3-text-black"><div class='text-medium'>{% trans 'Co-shipping Package(s)' %}</div></div>
+          </a>
+      </div>
+
+      <div id="order" class="message_block">
+        {% if order_list %}
+            {% for package in order_list %}
+                {% include "blocks/cart_order.html" with package=package %}
+            {% endfor %}
+        {% else %}
+        {% trans 'No Order'%}
+        {% endif %}
+      </div>
+
+      <div id="direct_package" class="message_block" style="display:none">
+        {% if parent_package_list %}
+            {% for package in parent_package_list %}
+                {% include "blocks/cart_direct_packages.html" with package=package %}
+            {% endfor %}
+        {% else %}
+        {% trans 'No Direct Shipping Package'%}
+        {% endif %}
+      </div>
+
+      <div id="coshipping" class="message_block" style="display:none">
+        {% if co_shipping_list %}
+            {% for package in co_shipping_list %}
+                {% include "blocks/cart_coshipping.html" with package=package %}
+            {% endfor %}
+        {% else %}
+        {% trans 'No Co-shipping Package'%}
+        {% endif %}
+      </div>
+</div>
+
+<script src="{% static 'js/package_cart.js' %}"></script>
+{% endblock %}

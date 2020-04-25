@@ -1,0 +1,595 @@
+/* Define standard variables and values for website */
+/* line 22, base/static/styles/index.scss */
+html {
+  height: 100%; }
+
+/* line 26, base/static/styles/index.scss */
+body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-size: 100%;
+  background-image: url("/static/images/background.png");
+  margin: 0;
+  display: flex;
+  flex-direction: column; }
+
+/* line 39, base/static/styles/index.scss */
+.ivory {
+  color: #fffff0; }
+
+/* line 42, base/static/styles/index.scss */
+.lightivory {
+  color: #f3f1ef; }
+
+/* line 45, base/static/styles/index.scss */
+.seagreen {
+  color: #20b2aa; }
+
+/* line 48, base/static/styles/index.scss */
+.teal {
+  color: #008080; }
+
+/* line 51, base/static/styles/index.scss */
+.gold {
+  color: #ffd700; }
+
+/* line 54, base/static/styles/index.scss */
+.lightgold {
+  color: #ffe140; }
+
+/* line 57, base/static/styles/index.scss */
+.grey {
+  color: grey; }
+
+/* line 60, base/static/styles/index.scss */
+.lightgrey {
+  color: #f9f9f9; }
+
+/* line 63, base/static/styles/index.scss */
+.navy {
+  color: #000080; }
+
+/* line 67, base/static/styles/index.scss */
+.blue {
+  color: #000080; }
+
+/* line 70, base/static/styles/index.scss */
+.darknavy {
+  color: #121A50; }
+
+/* line 73, base/static/styles/index.scss */
+.red {
+  color: #E73229; }
+
+/* line 77, base/static/styles/index.scss */
+.text-xxxlarge {
+  font-size: 3.6rem; }
+
+/* line 80, base/static/styles/index.scss */
+.text-xxxlarge-bold {
+  font-size: 3.6rem;
+  font-weight: bold; }
+
+/* line 84, base/static/styles/index.scss */
+.text-xxlarge {
+  font-size: 3rem; }
+
+/* line 87, base/static/styles/index.scss */
+.text-xxlarge-bold {
+  font-size: 3rem;
+  font-weight: bold; }
+
+/* line 91, base/static/styles/index.scss */
+.text-xlarge {
+  font-size: 3rem; }
+
+/* line 94, base/static/styles/index.scss */
+.text-xlarge-bold {
+  font-size: 3rem;
+  font-weight: bold; }
+
+/* line 98, base/static/styles/index.scss */
+.text-large {
+  font-size: 2.4rem; }
+
+/* line 101, base/static/styles/index.scss */
+.text-large-bold {
+  font-size: 2.4rem;
+  font-weight: bold; }
+
+/* line 105, base/static/styles/index.scss */
+.text-medium {
+  font-size: 1.8rem; }
+
+/* line 108, base/static/styles/index.scss */
+.text-medium-bold {
+  font-size: 1.8rem;
+  font-weight: bold; }
+
+/* line 112, base/static/styles/index.scss */
+.text-regular {
+  font-size: 1rem; }
+
+/* line 115, base/static/styles/index.scss */
+.text-regular-bold {
+  font-size: 1rem;
+  font-weight: bold; }
+
+/* line 119, base/static/styles/index.scss */
+.text-small {
+  font-size: 0.6rem; }
+
+/* line 122, base/static/styles/index.scss */
+.text-small-bold {
+  font-size: 0.6rem;
+  font-weight: bold; }
+
+/* line 127, base/static/styles/index.scss */
+.content_left {
+  width: 80%;
+  margin-left: 20%; }
+
+/* line 131, base/static/styles/index.scss */
+.content_right {
+  width: 80%; }
+
+/* line 134, base/static/styles/index.scss */
+.content_center {
+  width: 80%;
+  margin: auto; }
+
+/* line 3, base/static/styles/style.scss */
+.header {
+  padding: 0 10px; }
+  /* line 5, base/static/styles/style.scss */
+  .header-brand {
+    float: left; }
+    /* line 7, base/static/styles/style.scss */
+    .header-brand__a__img {
+      height: 3rem; }
+  /* line 11, base/static/styles/style.scss */
+  .header-menu {
+    line-height: 3rem;
+    float: right;
+    text-transform: uppercase; }
+    /* line 15, base/static/styles/style.scss */
+    .header-menu a {
+      text-decoration: none; }
+    /* line 18, base/static/styles/style.scss */
+    .header-menu__a, .header-menu-dropdown {
+      display: inline;
+      padding: 1rem;
+      cursor: pointer;
+      color: grey;
+      font-weight: bold; }
+      /* line 24, base/static/styles/style.scss */
+      .header-menu__a:hover, .header-menu-dropdown:hover {
+        color: #121A50; }
+    /* line 28, base/static/styles/style.scss */
+    .header-menu-dropdown {
+      display: relative; }
+      /* line 30, base/static/styles/style.scss */
+      .header-menu-dropdown:hover .header-menu-dropdown-content {
+        visibility: visible;
+        transition: visibility 0s; }
+      /* line 34, base/static/styles/style.scss */
+      .header-menu-dropdown__i {
+        padding: 0 0.6rem; }
+      /* line 37, base/static/styles/style.scss */
+      .header-menu-dropdown-content {
+        position: absolute;
+        box-shadow: 0 0.6rem 1rem 0 rgba(0, 0, 0, 0.2), 0 1rem 1.8rem 0 rgba(0, 0, 0, 0.19);
+        background-color: #f3f1ef;
+        z-index: 5;
+        visibility: hidden;
+        transition: visibility 0.3s;
+        line-height: 2.4rem;
+        top: 2.4rem; }
+        /* line 46, base/static/styles/style.scss */
+        .header-menu-dropdown-content__a {
+          color: grey;
+          display: block;
+          padding: 0 0.6rem; }
+          /* line 50, base/static/styles/style.scss */
+          .header-menu-dropdown-content__a:hover {
+            color: #000080;
+            background-color: #FFF;
+            box-shadow: 0 0.6rem 1rem 0 rgba(0, 0, 0, 0.2), 0 1rem 1.8rem 0 rgba(0, 0, 0, 0.19); }
+        /* line 56, base/static/styles/style.scss */
+        .header-menu-dropdown-content__select {
+          border: none;
+          padding: 0.6rem;
+          background-color: #f3f1ef; }
+          /* line 60, base/static/styles/style.scss */
+          .header-menu-dropdown-content__select__option {
+            cursor: pointer; }
+    /* line 66, base/static/styles/style.scss */
+    .header-menu .profile-links {
+      right: 7.92rem; }
+    /* line 69, base/static/styles/style.scss */
+    .header-menu .languages {
+      right: 3.6rem;
+      line-height: normal; }
+    /* line 73, base/static/styles/style.scss */
+    .header-menu-icon__a__i {
+      font-size: 1.8rem;
+      display: none; }
+
+/*  -------------------------- for circles ------------------------------------------*/
+/* animation block  */
+@-webkit-keyframes rightIn {
+  from {
+    right: -11rem; }
+  to {
+    right: -9rem; } }
+
+@-webkit-keyframes rightOut {
+  from {
+    right: -9rem; }
+  to {
+    right: -11rem; } }
+
+@-webkit-keyframes leftIn {
+  from {
+    left: -9rem; }
+  to {
+    left: -11rem; } }
+
+@-webkit-keyframes leftOut {
+  from {
+    left: -11rem; }
+  to {
+    left: -9rem; } }
+
+/* line 120, base/static/styles/style.scss */
+.home-circle-left {
+  margin-top: 3rem;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  float: left;
+  width: 13rem; }
+  /* line 127, base/static/styles/style.scss */
+  .home-circle-left-content {
+    width: 22rem;
+    height: 13rem;
+    border-radius: 50%;
+    padding: 10rem 1.8rem;
+    background-color: #E73229;
+    text-align: right;
+    position: relative;
+    left: -9rem;
+    animation-duration: .5s; }
+    /* line 138, base/static/styles/style.scss */
+    .home-circle-left-content:hover {
+      animation-name: leftIn;
+      animation-duration: .5s;
+      left: -11rem; }
+    /* line 143, base/static/styles/style.scss */
+    .home-circle-left-content__a {
+      text-decoration: none;
+      font-weight: bold;
+      color: white; }
+
+/* line 176, base/static/styles/style.scss */
+.home-circle-right {
+  margin: 3rem 0;
+  float: right;
+  width: 22rem;
+  height: 22rem; }
+  /* line 181, base/static/styles/style.scss */
+  .home-circle-right-content {
+    right: -9rem;
+    border-radius: 50%;
+    background-color: #000080;
+    text-align: left;
+    padding: 10rem 1.8rem;
+    position: relative;
+    animation-name: rightIn;
+    animation-duration: .5s; }
+    /* line 190, base/static/styles/style.scss */
+    .home-circle-right-content:hover {
+      animation-name: rightOut;
+      animation-duration: .5s;
+      right: -11rem; }
+    /* line 195, base/static/styles/style.scss */
+    .home-circle-right-content__a {
+      text-decoration: none;
+      font-weight: bold;
+      color: white; }
+
+/* line 202, base/static/styles/style.scss */
+.home-content {
+  text-align: center; }
+  /* line 204, base/static/styles/style.scss */
+  .home-content__a__img {
+    width: 28.8rem; }
+
+/*---------------------------------------for footer only----------------------------------------*/
+/* line 214, base/static/styles/style.scss */
+.footer {
+  flex: 0 0 1;
+  padding: 0.6rem 0;
+  background-color: #000080;
+  text-align: center; }
+  /* line 219, base/static/styles/style.scss */
+  .footer-copyright, .footer-policy {
+    text-align: center;
+    margin: 0;
+    padding: 0 1.8rem;
+    color: #fff; }
+
+/*----------------------------------------for small screem ----------------------------------*/
+@media screen and (max-width: 600px) {
+  /* line 229, base/static/styles/style.scss */
+  .home-xxxlarge {
+    font-size: 28px; }
+  /* line 232, base/static/styles/style.scss */
+  .home-xxxlarge-bold {
+    font-size: 28px;
+    font-weight: bold; }
+  /* line 236, base/static/styles/style.scss */
+  .home-xxlarge {
+    font-size: 25px;
+    font-family: Georgia; }
+  /* line 240, base/static/styles/style.scss */
+  .home-xxlarge-bold {
+    font-size: 25px;
+    font-weight: bold; }
+  /* line 244, base/static/styles/style.scss */
+  .home-xlarge {
+    font-size: 22px; }
+  /* line 247, base/static/styles/style.scss */
+  .home-xlarge-bold {
+    font-size: 22px;
+    font-weight: bold; }
+  /* line 251, base/static/styles/style.scss */
+  .home-large {
+    font-size: 20px; }
+  /* line 254, base/static/styles/style.scss */
+  .home-large-bold {
+    font-size: 20px;
+    font-weight: bold; }
+  /* line 258, base/static/styles/style.scss */
+  .home_logged {
+    background-position: right 0 bottom 0; }
+  /* line 261, base/static/styles/style.scss */
+  .content_left {
+    width: 95%;
+    margin: auto; }
+  /* line 265, base/static/styles/style.scss */
+  .content_right {
+    width: 95%;
+    margin: auto;
+    margin-top: 10px; }
+  /* line 270, base/static/styles/style.scss */
+  .content_center {
+    width: 95%;
+    margin: auto; }
+  /* line 274, base/static/styles/style.scss */
+  #main_address_form {
+    margin: 20px auto; }
+  /* line 277, base/static/styles/style.scss */
+  #container {
+    flex: 0 0 auto; }
+  /* line 280, base/static/styles/style.scss */
+  #footer {
+    position: relative;
+    height: auto;
+    text-align: center; }
+  /* line 285, base/static/styles/style.scss */
+  .footer_links {
+    display: none; }
+  /* line 288, base/static/styles/style.scss */
+  #footer h5 {
+    margin: 0;
+    cursor: pointer; }
+  /* line 292, base/static/styles/style.scss */
+  #customer_service_table img {
+    width: 40px;
+    margin: 10px 10px; }
+  /* line 296, base/static/styles/style.scss */
+  #customer_service_table {
+    background-color: lightgrey;
+    width: 100%;
+    margin: 10px; }
+  /* line 301, base/static/styles/style.scss */
+  #customer_service_table th {
+    width: 23%;
+    height: 140px;
+    background-color: white;
+    margin: 2px 1%; }
+  /* line 307, base/static/styles/style.scss */
+  .dropdown .dropdown-content {
+    display: block;
+    background-color: Transparent;
+    box-shadow: none;
+    padding-left: 10px; }
+  /* line 313, base/static/styles/style.scss */
+  .menu {
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    padding-top: 10px;
+    padding-right: 10px; }
+  /* line 320, base/static/styles/style.scss */
+  .menu .icon {
+    position: absolute;
+    right: 0;
+    top: 0; }
+  /* line 325, base/static/styles/style.scss */
+  .menu a, .dropdown .dropbtn, .menu form {
+    display: none; }
+  /* line 328, base/static/styles/style.scss */
+  .menu a:hover {
+    color: #2196F3;
+    background-color: #FFF;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19); }
+  /* line 333, base/static/styles/style.scss */
+  .menu a.icon {
+    float: right;
+    display: block;
+    padding: 5px 10px; }
+  /* line 338, base/static/styles/style.scss */
+  .menu #account_nav {
+    float: left;
+    display: block; }
+  /* line 342, base/static/styles/style.scss */
+  #CollectionPointID {
+    display: none; }
+  /* line 345, base/static/styles/style.scss */
+  #map {
+    display: block;
+    width: 100%; }
+  /* line 349, base/static/styles/style.scss */
+  .sidebar {
+    display: none; }
+  /* line 352, base/static/styles/style.scss */
+  fieldset label {
+    width: 100px; }
+  /* line 355, base/static/styles/style.scss */
+  fieldset {
+    padding: 0px; }
+  /* line 358, base/static/styles/style.scss */
+  .select_column {
+    width: 50px; }
+  /* line 362, base/static/styles/style.scss */
+  #shipping_half_circle, #tracking_half_circle, #shipping_full_circle, #tracking_full_circle {
+    font-size: 2.2vw; }
+  /* line 365, base/static/styles/style.scss */
+  .w3-third input, .w3-third select, .w3-half input, .w3-half select, .w3-quarter input, .w3-quarter select {
+    width: 100%; } }
+
+@media screen and (max-width: 600px) {
+  /* line 371, base/static/styles/style.scss */
+  .menu.responsive {
+    position: relative; }
+  /* line 372, base/static/styles/style.scss */
+  .menu.responsive a {
+    float: none;
+    display: block;
+    text-align: left; }
+  /* line 377, base/static/styles/style.scss */
+  .menu.responsive .dropdown {
+    float: none; }
+  /* line 378, base/static/styles/style.scss */
+  .menu.responsive .dropdown-content {
+    position: relative; }
+  /* line 379, base/static/styles/style.scss */
+  .menu.responsive form {
+    display: block;
+    background-color: Transparent;
+    box-shadow: none;
+    padding-left: 10px; }
+  /* line 386, base/static/styles/style.scss */
+  .menu.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left; }
+  /* line 391, base/static/styles/style.scss */
+  .menu select {
+    display: relative; } }
+
+/* ---------------------------------MESSAGES & ERRORS ----------------------------------------------*/
+/* line 398, base/static/styles/style.scss */
+ul.messagelist {
+  padding: 0;
+  margin: 0; }
+
+/* line 403, base/static/styles/style.scss */
+ul.messagelist li {
+  display: block;
+  font-weight: 400;
+  font-size: 13px;
+  padding: 10px 10px 10px 65px;
+  margin: 0 0 10px 0;
+  background: #dfd url("/static/admin/img/icon-yes.svg") 40px 12px no-repeat;
+  background-size: 16px auto;
+  color: #333; }
+
+/* line 414, base/static/styles/style.scss */
+ul.messagelist li.warning {
+  background: #ffc url("/static/admin/img/icon-alert.svg") 40px 14px no-repeat;
+  background-size: 14px auto; }
+
+/* line 419, base/static/styles/style.scss */
+ul.messagelist li.error {
+  background: #ffefef url("/static/admin/img/icon-no.svg") 40px 12px no-repeat;
+  background-size: 16px auto; }
+
+/* line 424, base/static/styles/style.scss */
+.errornote {
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  padding: 10px 12px;
+  margin: 0 0 10px 0;
+  color: #ba2121;
+  border: 1px solid #ba2121;
+  border-radius: 4px; }
+
+/* line 435, base/static/styles/style.scss */
+ul.errorlist {
+  margin: 0 0 4px;
+  padding: 0;
+  color: #ba2121; }
+
+/* line 441, base/static/styles/style.scss */
+ul.errorlist li {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 4px; }
+
+/* line 447, base/static/styles/style.scss */
+ul.errorlist li:first-child {
+  margin-top: 0; }
+
+/* line 451, base/static/styles/style.scss */
+ul.errorlist li a {
+  color: inherit;
+  text-decoration: underline; }
+
+/* line 456, base/static/styles/style.scss */
+td ul.errorlist {
+  margin: 0;
+  padding: 0; }
+
+/* line 461, base/static/styles/style.scss */
+td ul.errorlist li {
+  margin: 0; }
+
+/* line 465, base/static/styles/style.scss */
+.form-row.errors {
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid #eee;
+  background: none; }
+
+/* line 472, base/static/styles/style.scss */
+.form-row.errors ul.errorlist li {
+  padding-left: 0; }
+
+/* line 476, base/static/styles/style.scss */
+.errors input, .errors select, .errors textarea {
+  border: 1px solid #ba2121; }
+
+/* line 480, base/static/styles/style.scss */
+div.system-message {
+  background: #ffc;
+  margin: 10px;
+  padding: 6px 8px;
+  font-size: .8em; }
+
+/* line 487, base/static/styles/style.scss */
+div.system-message p.system-message-title {
+  padding: 4px 5px 4px 25px;
+  margin: 0;
+  color: #c11;
+  background: #ffefef url("/static/admin/img/icon-no.svg") 5px 5px no-repeat; }
+
+/* line 494, base/static/styles/style.scss */
+.description {
+  font-size: 12px;
+  padding: 5px 0 0 12px; }

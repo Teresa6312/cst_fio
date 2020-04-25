@@ -1,0 +1,64 @@
+/* Define standard variables and values for website */
+/* line 22, base/static/styles/index.scss */
+html {
+  height: 100%; }
+
+/* line 26, base/static/styles/index.scss */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: auto;
+  background-size: 100%;
+  background-image: url("/static/images/background.png");
+  margin: 0;
+  flex: 1 0 auto; }
+
+/* line 39, base/static/styles/index.scss */
+.ivory {
+  color: #fffff0; }
+
+/* line 42, base/static/styles/index.scss */
+.lightivory {
+  color: #f3f1ef; }
+
+/* line 45, base/static/styles/index.scss */
+.seagreen {
+  color: #20b2aa; }
+
+/* line 48, base/static/styles/index.scss */
+.teal {
+  color: #008080; }
+
+/* line 51, base/static/styles/index.scss */
+.gold {
+  color: #ffd700; }
+
+/* line 54, base/static/styles/index.scss */
+.lightgold {
+  color: #ffe140; }
+
+/* line 57, base/static/styles/index.scss */
+.grey {
+  color: grey; }
+
+/* line 60, base/static/styles/index.scss */
+.lightgrey {
+  color: #f9f9f9; }
+
+/* line 63, base/static/styles/index.scss */
+.navy {
+  color: #000080; }
+
+/* line 67, base/static/styles/index.scss */
+.blue {
+  color: #000080; }
+
+/* line 70, base/static/styles/index.scss */
+.darknavy {
+  color: #121A50; }
+
+/* line 73, base/static/styles/index.scss */
+.red {
+  color: #E73229; }
